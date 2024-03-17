@@ -12,8 +12,7 @@ public class FortuneWheelManager : MonoBehaviour
     private float _startAngle = 0;
     private float _currentLerpRotationTime;
     public Button TurnButton;
-    public GameObject Circle; 			// Rotatable Object with rewards
-    public Text CoinsDeltaText; 		// Pop-up text with wasted or rewarded coins amount
+    public GameObject Circle; 			// Rotatable Object with rewards 		// Pop-up text with wasted or rewarded coins amount
     public Text CurrentCoinsText; 		// Pop-up text with wasted or rewarded coins amount
     public int TurnCost = 300;			// How much coins user waste when turn whe wheel
     public int CurrentCoinsAmount;	// Started coins amount. In your project it can be set up from CoinsManager or from PlayerPrefs and so on
@@ -23,13 +22,13 @@ public class FortuneWheelManager : MonoBehaviour
     {
         CurrentCoinsAmount = 1000;
         PreviousCoinsAmount = CurrentCoinsAmount;
-        CurrentCoinsText.text = CurrentCoinsAmount.ToString ();
     }
 
     public void TurnWheel ()
     {
     	// Player has enough money to turn the wheel
-        if (CurrentCoinsAmount >= TurnCost) {
+        //if (CurrentCoinsAmount >= TurnCost)
+        {
     	    _currentLerpRotationTime = 0f;
     	
     	    // Fill the necessary angles (for example if you want to have 12 sectors you need to fill the angles with 30 degrees step)
@@ -47,10 +46,6 @@ public class FortuneWheelManager : MonoBehaviour
     	    // Decrease money for the turn
     	    CurrentCoinsAmount -= TurnCost;
     	
-    	    // Show wasted coins
-    	    CoinsDeltaText.text = "-" + TurnCost;
-    	    CoinsDeltaText.gameObject.SetActive (true);
-    	
     	    // Animate coins
     	    StartCoroutine (HideCoinsDelta ());
     	    StartCoroutine (UpdateCoinsAmount ());
@@ -65,40 +60,40 @@ public class FortuneWheelManager : MonoBehaviour
     	    RewardCoins (1000);
     	    break;
     	case -330:
-    	    RewardCoins (200);
+    	    RewardCoins (1000);
     	    break;
     	case -300:
-    	    RewardCoins (100);
+    	    RewardCoins (150);
     	    break;
     	case -270:
-    	    RewardCoins (500);
+    	    RewardCoins (150);
     	    break;
     	case -240:
-    	    RewardCoins (300);
-    	    break;
-    	case -210:
-    	    RewardCoins (100);
-    	    break;
-    	case -180:
-    	    RewardCoins (900);
-    	    break;
-    	case -150:
     	    RewardCoins (200);
     	    break;
+    	case -210:
+    	    RewardCoins (200);
+    	    break;
+    	case -180:
+    	    RewardCoins (255);
+    	    break;
+    	case -150:
+    	    RewardCoins (255);
+    	    break;
     	case -120:
-    	    RewardCoins (100);
+    	    RewardCoins (200);
     	    break;
     	case -90:
-    	    RewardCoins (700);
+    	    RewardCoins (200);
     	    break;
     	case -60:
-    	    RewardCoins (300);
+    	    RewardCoins (500);
     	    break;
     	case -30:
-    	    RewardCoins (100);
+    	    RewardCoins (500);
     	    break;
     	default:
-    	    RewardCoins (300);
+    	    RewardCoins (100);
     	    break;
         }
     }
@@ -143,22 +138,17 @@ public class FortuneWheelManager : MonoBehaviour
 
     private void RewardCoins (int awardCoins)
     {
-        CurrentCoinsAmount += awardCoins;
-        CoinsDeltaText.text = "+" + awardCoins;
-        CoinsDeltaText.gameObject.SetActive (true);
-        SaveCoins();
-        StartCoroutine (UpdateCoinsAmount ());
+        PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money"+awardCoins));
+        PlayerPrefs.Save();
     }
     private void SaveCoins()
     {
-        PlayerPrefs.SetInt("score", CurrentCoinsAmount);
-        PlayerPrefs.Save();
+
     }
         
     private IEnumerator HideCoinsDelta ()
     {
         yield return new WaitForSeconds (1f);
-	CoinsDeltaText.gameObject.SetActive (false);
     }
 
     private IEnumerator UpdateCoinsAmount ()
@@ -168,13 +158,13 @@ public class FortuneWheelManager : MonoBehaviour
     	float elapsedTime = 0;
     
     	while (elapsedTime < seconds) {
-    	    CurrentCoinsText.text = Mathf.Floor(Mathf.Lerp (PreviousCoinsAmount, CurrentCoinsAmount, (elapsedTime / seconds))).ToString ();
+    	    //CurrentCoinsText.text = Mathf.Floor(Mathf.Lerp (PreviousCoinsAmount, CurrentCoinsAmount, (elapsedTime / seconds))).ToString ();
     	    elapsedTime += Time.deltaTime;
     
     	    yield return new WaitForEndOfFrame ();
         }
     
     	PreviousCoinsAmount = CurrentCoinsAmount;
-    	CurrentCoinsText.text = CurrentCoinsAmount.ToString ();
+    	//CurrentCoinsText.text = CurrentCoinsAmount.ToString ();
     }
 }
