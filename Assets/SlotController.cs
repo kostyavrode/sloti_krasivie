@@ -105,12 +105,14 @@ public class SlotController : MonoBehaviour
         {
             for (int i = 0; i < ColumnItemsCount; i++)
             {
-                if (this.slotResult[2 + i,0] == this.slotResult[2 + i, 1] && this.slotResult[2 + i, 1] == this.slotResult[2 + i, 2])
+                if ((this.slotResult[2 + i,0] == this.slotResult[2 + i, 1] && this.slotResult[2 + i, 1] == this.slotResult[2 + i, 2]) 
+                    || (this.slotResult[2 + i, 1] == this.slotResult[2 + i, 2] && this.slotResult[2 + i, 2] == this.slotResult[2 + i, 3]))
                 {
                     BigWin();
                     win = true;
                 }
-                else if (this.slotResult[2 + i, 0] == this.slotResult[2 + i, 1] || this.slotResult[2 + i, 1] == this.slotResult[2 + i, 2])
+                else if ((this.slotResult[2 + i, 0] == this.slotResult[2 + i, 1] || this.slotResult[2 + i, 1] == this.slotResult[2 + i, 2]) ||
+                    (this.slotResult[2 + i, 1] == this.slotResult[2 + i, 2] || this.slotResult[2 + i, 2] == this.slotResult[2 + i, 3]))
                 {
                     Win();
                     win = true;

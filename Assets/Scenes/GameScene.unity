@@ -10913,7 +10913,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2112221875060892606, guid: e3a553e0c267d274cbe25e88f9e52a4a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
-      value: SlotsScene3
+      value: SlotsScene2
       objectReference: {fileID: 0}
     - target: {fileID: 2112221875060892606, guid: e3a553e0c267d274cbe25e88f9e52a4a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_StringArgument
@@ -14603,7 +14603,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2112221875060892606, guid: e3a553e0c267d274cbe25e88f9e52a4a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
-      value: SlotsScene2
+      value: SlotsScene3
       objectReference: {fileID: 0}
     - target: {fileID: 2112221875060892606, guid: e3a553e0c267d274cbe25e88f9e52a4a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_StringArgument
