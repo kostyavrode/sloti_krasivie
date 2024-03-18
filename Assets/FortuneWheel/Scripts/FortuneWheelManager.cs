@@ -138,7 +138,7 @@ public class FortuneWheelManager : MonoBehaviour
 
     private void RewardCoins (int awardCoins)
     {
-        PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money"+awardCoins));
+        PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money") + awardCoins);
         PlayerPrefs.Save();
     }
     private void SaveCoins()

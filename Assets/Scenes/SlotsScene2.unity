@@ -2062,6 +2062,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 892774004}
+  audioSource2: {fileID: 716862269}
 --- !u!1 &830218744 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5021902402088661618, guid: 28a90869c1f18493d84d2edc3c35b9dc, type: 3}
@@ -2548,7 +2549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.6862745}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

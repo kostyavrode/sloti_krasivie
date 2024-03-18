@@ -5,15 +5,10 @@ using UnityEngine;
 public class SlotSoundChecker : MonoBehaviour
 {
     public AudioSource audioSource;
+    public AudioSource audioSource2;
     private void Start()
     {
-        if (PlayerPrefs.GetString("Sound")=="true")
-        {
-            audioSource.Play();
-        }
-        else
-        {
-            audioSource.Pause();
-        }
+        audioSource.volume = PlayerPrefs.GetFloat("Sound");
+        audioSource2.volume = PlayerPrefs.GetFloat("Music");
     }
 }

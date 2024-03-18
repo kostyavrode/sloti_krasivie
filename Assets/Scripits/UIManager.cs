@@ -30,7 +30,7 @@ public class UIManager : MonoBehaviour
             PlayerPrefs.SetString("Sound", "true");
             PlayerPrefs.Save();
         }
-        CheckSound();
+        //CheckSound();
     }
     private void Update()
     {
