@@ -72,5 +72,6 @@ public class DailyReward : MonoBehaviour
                 break;
         }
         CheckDay();
+        UIManager.instance.ShowMoney(PlayerPrefs.GetInt("Money").ToString());
     }
 }

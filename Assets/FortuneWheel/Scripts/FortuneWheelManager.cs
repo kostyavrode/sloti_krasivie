@@ -140,6 +140,7 @@ public class FortuneWheelManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money") + awardCoins);
         PlayerPrefs.Save();
+        UIManager.instance.ShowMoney(PlayerPrefs.GetInt("Money").ToString());
     }
     private void SaveCoins()
     {

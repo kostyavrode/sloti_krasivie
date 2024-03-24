@@ -26,10 +26,10 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            PlayerPrefs.SetInt("Money", 100000);
+            PlayerPrefs.SetInt("Money", 1000);
             PlayerPrefs.Save();
         }
-        
+        UIManager.instance.ShowMoney(PlayerPrefs.GetInt("Money").ToString());
     }
     private void Start()
     {

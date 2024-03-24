@@ -1672,7 +1672,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -756, y: 277}
+  m_AnchoredPosition: {x: -756, y: 277.09998}
   m_SizeDelta: {x: 400, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &635927486
@@ -1905,7 +1905,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -1441, y: -789.5}
+  m_AnchoredPosition: {x: -1441, y: -790.9}
   m_SizeDelta: {x: 300, y: 90}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &765134740
@@ -2311,7 +2311,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 78a3e518ce9a9394f801f3751e05f360, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f0844d826a4c4aa4483994e34442fb75, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.531
   m_Pitch: 1
@@ -3343,7 +3343,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -760, y: 264}
+  m_AnchoredPosition: {x: -760, y: 261.6}
   m_SizeDelta: {x: 500, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1533814875
@@ -3589,7 +3589,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -80, y: -690}
+  m_AnchoredPosition: {x: -80, y: -686.9}
   m_SizeDelta: {x: 400, y: 300}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2142362567
@@ -13629,6 +13629,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audio Source (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5751400483967244736, guid: c1a51a047353e487583f1b7f4c19f937, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 67816971b346948b2b356c399484be8e, type: 3}
     - target: {fileID: 7249733071428998591, guid: c1a51a047353e487583f1b7f4c19f937, type: 3}
       propertyPath: m_LocalPosition.x
       value: 960
