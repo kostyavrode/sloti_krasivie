@@ -89,7 +89,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2151168169954857371
 RectTransform:
   m_ObjectHideFlags: 0
@@ -106,7 +106,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 53}
+  m_AnchoredPosition: {x: 0, y: 215}
   m_SizeDelta: {x: 500, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4639246048999687023
@@ -137,17 +137,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: YOU WIN!
+  m_text: BIG WIN
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 340fb89a8f233b548b2c224a31b3c554, type: 2}
-  m_sharedMaterial: {fileID: -1884209833179002682, guid: 340fb89a8f233b548b2c224a31b3c554, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c268f5e4cbcd2374e8323e9244a2357d, type: 2}
+  m_sharedMaterial: {fileID: 2923751411826470925, guid: c268f5e4cbcd2374e8323e9244a2357d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4285265151
+  m_fontColor: {r: 1, g: 0.9572753, b: 0.4198113, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -164,8 +164,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55.6
-  m_fontSizeBase: 55.6
+  m_fontSize: 67.5
+  m_fontSizeBase: 67.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -232,7 +232,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5021902402088661618}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -279,7 +279,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 753a178dc2daff64f9a78960b26cae21, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9c4bea8fc02da054081ec1abaf95e664, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -503,7 +503,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: eff756bd250e8154dae9b6bf738d6731, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 96d3e40b81ff9ff47a8a7816cfaa35e5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -601,10 +601,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 5711540291707978650}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -5, y: 57.214996}
-  m_SizeDelta: {x: -149.54001, y: 73.79}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 29}
+  m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2816093156458199001
 CanvasRenderer:
@@ -634,7 +634,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 65e603f47b3d54c28bc52fe55d4bc214, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 64ced32a56684654e9cfa9cdb22bd325, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -820,7 +820,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4022359193968644, guid: 2d3452940eab6364887f48142cbf415d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -519.1765
+      value: -589.1
       objectReference: {fileID: 0}
     - target: {fileID: 4022359193968644, guid: 2d3452940eab6364887f48142cbf415d, type: 3}
       propertyPath: m_LocalPosition.y

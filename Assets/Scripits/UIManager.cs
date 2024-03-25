@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
     public GameObject orientator;
+    [SerializeField] private TMP_Text levelBar;
     [SerializeField] private TMP_Text scoreBar;
     [SerializeField] private TMP_Text bestScoreBar;
     [SerializeField] private TMP_Text moneyBar;
@@ -29,6 +30,10 @@ public class UIManager : MonoBehaviour
         {
             PlayerPrefs.SetString("Sound", "true");
             PlayerPrefs.Save();
+        }
+        if (PlayerPrefs.GetString("Buy1")=="true")
+        {
+            ShowLevel(2);
         }
         //CheckSound();
     }
@@ -98,6 +103,10 @@ public class UIManager : MonoBehaviour
     {
         GameManager.instance.PauseGame();
     }
+    public void ShowLevel(int level)
+    {
+        levelBar.text = "Lvl." + level.ToString();
+    }
     public void UnPauseGame()
     {
         GameManager.instance.UnPauseGame();
@@ -122,5 +131,9 @@ public class UIManager : MonoBehaviour
         uniWebView.SetShowToolbar(true, false, true, true);
         uniWebView.Load(url);
         uniWebView.Show();
+    }
+    public void CloseGame()
+    {
+        Application.Quit();
     }
 }

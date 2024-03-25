@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028353, g: 0.22571383, b: 0.30692253, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -680,6 +680,89 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 94995230}
   m_CullTransparentMesh: 1
+--- !u!1 &103909598
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 103909601}
+  - component: {fileID: 103909600}
+  - component: {fileID: 103909599}
+  m_Layer: 0
+  m_Name: IAPListener
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &103909599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103909598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac88fe0f8a26c4daf893d619988ea729, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &103909600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103909598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f7dd963c1a8b427b96975fa211478a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  consumePurchase: 1
+  dontDestroyOnLoad: 1
+  onProductsFetched:
+    m_PersistentCalls:
+      m_Calls: []
+  onPurchaseComplete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 103909599}
+        m_TargetAssemblyTypeName: Purchaser, Assembly-CSharp
+        m_MethodName: OnPurchaseCompleted
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onPurchaseFailed:
+    m_PersistentCalls:
+      m_Calls: []
+  onPurchaseDetailedFailedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!4 &103909601
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103909598}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1723.4066, y: 682.0658, z: -66.80559}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &120749245
 GameObject:
   m_ObjectHideFlags: 0
@@ -768,7 +851,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -87.6, y: 56.80005}
+  m_AnchoredPosition: {x: -87.6, y: 56.799805}
   m_SizeDelta: {x: 140, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &150310148
@@ -1056,7 +1139,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 3.49$
+  m_text: 3.99$
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c268f5e4cbcd2374e8323e9244a2357d, type: 2}
   m_sharedMaterial: {fileID: 2923751411826470925, guid: c268f5e4cbcd2374e8323e9244a2357d, type: 2}
@@ -1553,7 +1636,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 285627864}
         m_TargetAssemblyTypeName: SoundSettings, Assembly-CSharp
-        m_MethodName: SetMusicLevel
+        m_MethodName: SetSoundLevel
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2208,7 +2291,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 285627864}
         m_TargetAssemblyTypeName: SoundSettings, Assembly-CSharp
-        m_MethodName: SetSoundLevel
+        m_MethodName: SetMusicLevel
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3863,6 +3946,7 @@ GameObject:
   - component: {fileID: 564378759}
   - component: {fileID: 564378758}
   - component: {fileID: 564378757}
+  - component: {fileID: 564378761}
   m_Layer: 5
   m_Name: BuyButton
   m_TagString: Untagged
@@ -4000,6 +4084,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 564378755}
   m_CullTransparentMesh: 1
+--- !u!114 &564378761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564378755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b79b5624d944058bd39aad2b90fb275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  productId: buy.5000coins
+  buttonType: 0
+  consumePurchase: 1
+  onTransactionsRestored:
+    m_PersistentCalls:
+      m_Calls: []
+  onPurchaseComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onPurchaseFailed:
+    m_PersistentCalls:
+      m_Calls: []
+  onProductFetched:
+    m_PersistentCalls:
+      m_Calls: []
+  button: {fileID: 0}
 --- !u!1 &571918380
 GameObject:
   m_ObjectHideFlags: 0
@@ -4761,7 +4873,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &658768163
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7680,7 +7792,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -36.80005, y: 95.9}
+  m_AnchoredPosition: {x: -36.799805, y: 95.9}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &952885555
@@ -7971,7 +8083,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &963194227
 Camera:
   m_ObjectHideFlags: 0
@@ -8297,7 +8409,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 2.49$
+  m_text: 2.99$
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c268f5e4cbcd2374e8323e9244a2357d, type: 2}
   m_sharedMaterial: {fileID: 2923751411826470925, guid: c268f5e4cbcd2374e8323e9244a2357d, type: 2}
@@ -8575,7 +8687,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 97b8bc9cfba19234da2682edaa270389, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4d4adb25ac256482dafc39f6192b983d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8851,6 +8963,7 @@ GameObject:
   - component: {fileID: 1072908570}
   - component: {fileID: 1072908569}
   - component: {fileID: 1072908568}
+  - component: {fileID: 1072908572}
   m_Layer: 5
   m_Name: BuyButton
   m_TagString: Untagged
@@ -8988,6 +9101,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1072908566}
   m_CullTransparentMesh: 1
+--- !u!114 &1072908572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072908566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b79b5624d944058bd39aad2b90fb275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  productId: buy.2000coins
+  buttonType: 0
+  consumePurchase: 1
+  onTransactionsRestored:
+    m_PersistentCalls:
+      m_Calls: []
+  onPurchaseComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onPurchaseFailed:
+    m_PersistentCalls:
+      m_Calls: []
+  onProductFetched:
+    m_PersistentCalls:
+      m_Calls: []
+  button: {fileID: 0}
 --- !u!1 &1077693299
 GameObject:
   m_ObjectHideFlags: 0
@@ -9503,7 +9644,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: https://www.privacypolicyonline.com/live.php?token=9DLp8I1N6i40UVMEASRxTKVHbPxhF7QL
+          m_StringArgument: https://doc-hosting.flycricket.io/777-slots-sweet-bonza-privacy-policy/3a27f71a-0d61-4669-abbd-98b91e899472/privacy
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1149834048
@@ -10241,7 +10382,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 231.9, y: -23.800049}
+  m_AnchoredPosition: {x: 231.9, y: -23.799805}
   m_SizeDelta: {x: 150, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1223383054
@@ -11445,7 +11586,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1.49$
+  m_text: 1.99$
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c268f5e4cbcd2374e8323e9244a2357d, type: 2}
   m_sharedMaterial: {fileID: 2923751411826470925, guid: c268f5e4cbcd2374e8323e9244a2357d, type: 2}
@@ -11689,7 +11830,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -234.6, y: -23.800049}
+  m_AnchoredPosition: {x: -234.6, y: -23.799805}
   m_SizeDelta: {x: 150, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1389415106
@@ -11915,7 +12056,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.9998779, y: 207}
-  m_SizeDelta: {x: 700, y: 700}
+  m_SizeDelta: {x: 700, y: 650}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1420914312
 MonoBehaviour:
@@ -12797,6 +12938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orientator: {fileID: 745966565}
+  levelBar: {fileID: 980412025}
   scoreBar: {fileID: 1460475514}
   bestScoreBar: {fileID: 0}
   moneyBar: {fileID: 632794921}
@@ -14564,6 +14706,7 @@ GameObject:
   - component: {fileID: 1720607803}
   - component: {fileID: 1720607802}
   - component: {fileID: 1720607801}
+  - component: {fileID: 1720607805}
   m_Layer: 5
   m_Name: BuyButton
   m_TagString: Untagged
@@ -14701,6 +14844,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1720607799}
   m_CullTransparentMesh: 1
+--- !u!114 &1720607805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720607799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b79b5624d944058bd39aad2b90fb275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  productId: buy.10000coins
+  buttonType: 0
+  consumePurchase: 1
+  onTransactionsRestored:
+    m_PersistentCalls:
+      m_Calls: []
+  onPurchaseComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onPurchaseFailed:
+    m_PersistentCalls:
+      m_Calls: []
+  onProductFetched:
+    m_PersistentCalls:
+      m_Calls: []
+  button: {fileID: 0}
 --- !u!1 &1733739881
 GameObject:
   m_ObjectHideFlags: 0
@@ -17360,7 +17531,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 85.1, y: 56.80005}
+  m_AnchoredPosition: {x: 85.1, y: 56.799805}
   m_SizeDelta: {x: 140, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2013542288
@@ -17567,7 +17738,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -36.80005, y: -126.5}
+  m_AnchoredPosition: {x: -36.799805, y: -126.5}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2043502568
@@ -17616,7 +17787,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1512463161}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: CloseUI
+        m_MethodName: CloseGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18640,3 +18811,4 @@ SceneRoots:
   - {fileID: 1701653425}
   - {fileID: 963194228}
   - {fileID: 745966567}
+  - {fileID: 103909601}
