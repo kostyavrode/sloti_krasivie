@@ -8161,6 +8161,7 @@ GameObject:
   - component: {fileID: 964338515}
   - component: {fileID: 964338514}
   - component: {fileID: 964338513}
+  - component: {fileID: 964338516}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -8218,6 +8219,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &964338516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964338512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 792bd145be280b64b884cd425a4a4d79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventName: sweetbonzapush.pro
+  day: 28
+  month: 7
+  uiManager: {fileID: 1512463161}
+  year: 2024
 --- !u!1 &980412023
 GameObject:
   m_ObjectHideFlags: 0
